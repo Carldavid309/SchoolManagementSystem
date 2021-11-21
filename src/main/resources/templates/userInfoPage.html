@@ -31,9 +31,8 @@
     <div class="info">
       <div class="dash">Dashboard</div>
       <div class="system">School Management System</div>
-      <div> <button class="buttons" type="button">Total Student</button>
-        <button class="buttons" type="button">Total Buildings</button>
-        <button class="buttons" type="button">Available Courses</button>
+      <div> <<button onclick="student()" class="buttons" type="button">Total Student</button>
+        <button onclick="courses()" class="buttons" type="button">Available Courses</button>
         <div class="youtube">
           <iframe width="700" height="415"
                   src="https://www.youtube.com/embed/E27yQoAGb4Q?autoplay=1&mute=1">
@@ -43,6 +42,20 @@
     </div>
   </div>
 </div>
+<script>
+  function student() {
+    var txt;
+    if (confirm("Holy Angel Have a student population over 21,000")) {
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
+  function courses() {
+    var txt;
+    if (confirm("You can see the different courses at hau.edu.ph")) {
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
+</script>
 
 </body>
 
