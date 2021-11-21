@@ -116,7 +116,7 @@ img{
 }
 .buttons{
     background-color: #6495ed;
-    border:block;
+    border:ridge;
     border-radius:25px;
     color: black;
     margin-left: 170px;
@@ -129,16 +129,18 @@ img{
 }
 .logout{
     background-color: white;
-    border:block;
     border-radius:25px;
     color: black;
-    margin-left: 20%;
-    margin-top: 240%;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+#fixedbutton{
+    position: fixed;
+    margin-top: 15%;
+    margin-right: 50%;
 }
 .wrapper .main_content .info .youtube{
     margin-top: 40px;
