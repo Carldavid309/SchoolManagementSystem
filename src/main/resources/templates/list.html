@@ -16,28 +16,32 @@
     <table class="table table-bordered table-striped">
         <tr>
             <th>ID</th>
-            <th>名前</th>
-            <th>メールアドレス</th>
+            <th>name</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>age</th>
             <!-- 追記1 -->
             <!-- ポイント1 -->
             <th colspan="2">編集</th>
         </tr>
-        <tr th:each="customer : ${customers}">
-            <td th:text="${customer.id}"></td>
-            <td th:text="${customer.name}"></td>
-            <td th:text="${customer.email}"></td>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.email}"></td>
+            <td th:text="${student.phone}"></td>
+            <td th:text="${student.age}"></td>
             <!-- 追記2 -->
             <td>
                 <form th:action="@{/edit}" method="post">
                     <input type="submit" class="btn btn-outline-primary" name="edit" value="編集">
                     <!-- ポイント1 -->
-                    <input type="hidden" name="id" th:value="${customer.id}">
+                    <input type="hidden" name="id" th:value="${student.id}">
                 </form>
             </td>
             <td>
                 <form th:action="@{/edit}" method="post">
                     <input type="submit" class="btn btn-outline-danger" name="delete" value="削除">
-                    <input type="hidden" name="id" th:value="${customer.id}">
+                    <input type="hidden" name="id" th:value="${student.id}">
                 </form>
             </td>
         </tr>

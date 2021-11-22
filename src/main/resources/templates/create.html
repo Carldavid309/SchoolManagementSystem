@@ -6,16 +6,24 @@
 </head>
 <body>
 <h1>顧客登録</h1>
-<form th:action="@{/create}" th:object="${customerForm}" method="post">
+<form th:action="@{/create}" th:object="${studentForm}" method="post">
   <table>
     <tr>
-      <th>名前</th>
+      <th>name</th>
       <!-- ポイント1 -->
       <td><input type="text" name="name" th:field="*{name}"><span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span></td>
     </tr>
     <tr>
-      <th>メールアドレス</th>
+      <th>email</th>
       <td><input type="text" name="email" th:field="*{email}"><span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
+    </tr>
+    <tr>
+      <th>phone number</th>
+      <td><input type="text" name="phone" th:field="*{phone}"><span th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span></td>
+    </tr>
+    <tr>
+      <th>age</th>
+      <td><input type="text" name="age" th:field="*{age}"><span th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span></td>
     </tr>
   </table>
   <input type="submit" value="登録">

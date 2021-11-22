@@ -6,7 +6,7 @@ import javax.validation.constraints.Size;
 import lombok.Data;
 
 @Data
-public class CustomerForm {
+public class StudentForm {
     private Integer id;
     //ポイント1
     @NotBlank
@@ -14,4 +14,6 @@ public class CustomerForm {
     private String name;
     @Size(max = 100)
     private String email;
+    private String phone;
+    private String age;
 }

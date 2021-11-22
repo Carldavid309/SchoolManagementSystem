@@ -13,11 +13,11 @@ import lombok.NoArgsConstructor;
 
 //ポイント1
 @Entity
-@Table(name = "customer")
+@Table(name = "student")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer {
+public class Student {
     //ポイント2
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +25,6 @@ public class Customer {
     @Column(nullable = false)
     private String name;
     private String email;
+    private String phone;
+    private String age;
 }

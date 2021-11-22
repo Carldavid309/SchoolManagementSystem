@@ -9,15 +9,23 @@
 <body>
 <div class="container">
     <h1 class="my-5">顧客編集</h1>
-    <form th:action="@{/edit}" th:object="${customerForm}" method="post">
+    <form th:action="@{/edit}" th:object="${studentForm}" method="post">
         <table class="table table-bordered table-hover col-6">
             <tr class="form-group">
-                <th class="align-middle">名前</th>
+                <th class="align-middle">name</th>
                 <td><input type="text" class="form-control" name="name" th:field="*{name}" th:classappend="${#fields.hasErrors('name')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span></td>
             </tr>
             <tr class="form-group">
-                <th>メールアドレス</th>
+                <th>email</th>
                 <td><input type="text" class="form-control" name="email" th:field="*{email}" th:classappend="${#fields.hasErrors('email')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>phone number</th>
+                <td><input type="text" class="form-control" name="phone" th:field="*{phone}" th:classappend="${#fields.hasErrors('phone')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></span></td>
+            </tr>
+            <tr class="form-group">
+                <th>age</th>
+                <td><input type="text" class="form-control" name="age" th:field="*{age}" th:classappend="${#fields.hasErrors('age')} ? 'is-invalid'"><span class="text-danger" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></span></td>
             </tr>
         </table>
         <input type="submit" class="btn btn-outline-dark mt-3" name="back" value="戻る">
