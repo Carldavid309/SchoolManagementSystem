@@ -16,7 +16,6 @@ public class StudentService {
     @Autowired
     StudentRepository studentRepository;
 
-    //ポイント①
     public List<Student> findAll() {
         return studentRepository.findAllOrderById();
     }
