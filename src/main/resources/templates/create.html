@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>New Registers</title>
+  <link th:href="@{/login.css}" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Baloo' rel='stylesheet'>
+
+</head>
+<body>
+<div>
+<h1>New Registers</h1>
+<form class="register" th:action="@{/create}" th:object="${customerForm}" method="post">
+  <table>
+    <tr>
+      <th>Name</th>
+      <!-- ポイント1 -->
+      <td><input type="text" name="name" th:field="*{name}"><span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><input type="text" name="email" th:field="*{email}"><span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span></td>
+    </tr>
+  </table>
+  <input class="regbtn" type="submit" value="Submit">
+
+</form>
+</div>
+</ul>
+</div>
+<h2></h2>
+<h3></h3>
+
+<div class="animation-area">
+  <ul class="box-area">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</body>
+</html>

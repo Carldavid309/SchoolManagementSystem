@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css">
+    <title>Student-List</title>
+</head>
+<body>
+<div class="container">
+    <div class="my-5">
+        <a class="btn btn-primary" th:href="@{/create}">New Registers</a>
+    </div>
+    <hr>
+    <h1 class="my-2">Student-List</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <!-- 追記1 -->
+            <!-- ポイント1 -->
+            <th colspan="2">Edit</th>
+        </tr>
+        <tr th:each="customer : ${customers}">
+            <td th:text="${customer.id}"></td>
+            <td th:text="${customer.name}"></td>
+            <td th:text="${customer.email}"></td>
+            <!-- 追記2 -->
+            <td>
+                <form th:action="@{/edit}" method="post">
+                    <input type="submit" class="btn btn-outline-primary" name="edit" value="edit">
+                    <!-- ポイント1 -->
+                    <input type="hidden" name="id" th:value="${customer.id}">
+                </form>
+            </td>
+            <td>
+                <form th:action="@{/edit}" method="post">
+                    <input type="submit" class="btn btn-outline-danger" name="delete" value="delete">
+                    <input type="hidden" name="id" th:value="${customer.id}">
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+<script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
