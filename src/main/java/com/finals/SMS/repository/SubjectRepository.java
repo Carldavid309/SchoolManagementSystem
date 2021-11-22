@@ -9,6 +9,6 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface SubjectRepository extends JpaRepository<Subject, Integer>{
 
-    @Query("SELECT s FROM Subject s ORDER BY s.id")
+    @Query("SELECT s FROM Subject s ORDER BY s.classcode")
     List<Subject> findAllOrderById();
 }
