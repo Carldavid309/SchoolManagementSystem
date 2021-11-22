@@ -11,18 +11,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-//ポイント1
+
 @Entity
-@Table(name = "customer")
+@Table(name = "student")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Customer {
-    //ポイント2
+public class Student {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(nullable = false)
-    private String name;
+    private String firstname;
+    private String lastname;
     private String email;
+    private String phone;
+    private String age;
 }
