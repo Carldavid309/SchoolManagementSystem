@@ -9,9 +9,14 @@
 <form th:action="@{/create}" th:object="${studentForm}" method="post">
   <table>
     <tr>
-      <th>name</th>
+      <th>firstname</th>
       <!-- ポイント1 -->
-      <td><input type="text" name="name" th:field="*{name}"><span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span></td>
+      <td><input type="text" name="firstname" th:field="*{firstname}"><span th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></span></td>
+    </tr>
+    <tr>
+      <th>lastname</th>
+      <!-- ポイント1 -->
+      <td><input type="text" name="lastname" th:field="*{lastname}"><span th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></span></td>
     </tr>
     <tr>
       <th>email</th>

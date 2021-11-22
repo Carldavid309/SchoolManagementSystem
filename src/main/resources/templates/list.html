@@ -16,7 +16,8 @@
     <table class="table table-bordered table-striped">
         <tr>
             <th>ID</th>
-            <th>name</th>
+            <th>firstname</th>
+            <th>lastname</th>
             <th>email</th>
             <th>phone</th>
             <th>age</th>
@@ -26,7 +27,8 @@
         </tr>
         <tr th:each="student : ${students}">
             <td th:text="${student.id}"></td>
-            <td th:text="${student.name}"></td>
+            <td th:text="${student.firstname}"></td>
+            <td th:text="${student.lastname}"></td>
             <td th:text="${student.email}"></td>
             <td th:text="${student.phone}"></td>
             <td th:text="${student.age}"></td>

@@ -11,9 +11,13 @@ public class StudentForm {
     //ポイント1
     @NotBlank
     @Size(min = 1, max = 20)
-    private String name;
+    private String firstname;
+    @Size(min = 1, max = 20)
+    private String lastname;
     @Size(max = 100)
     private String email;
+    @Size(min = 1, max = 20)
     private String phone;
+    @Size(min = 1, max = 20)
     private String age;
 }

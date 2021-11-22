@@ -23,7 +23,8 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(nullable = false)
-    private String name;
+    private String firstname;
+    private String lastname;
     private String email;
     private String phone;
     private String age;
